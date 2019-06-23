@@ -12,5 +12,4 @@ RUN net start MSIServer ;\
 	IISRESET
 
 WORKDIR /inetpub/wwwroot
-COPY . .
-EXPOSE 80
+COPY ${source:-obj/Docker/publish} .
